@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import type { SyntheticEvent } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { useTicketStore } from "@/stores/ticket-store";
@@ -114,7 +115,7 @@ export function TicketEditPage() {
     );
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
     e.preventDefault();
     if (!formData.title.trim()) return;
     if (!canAccessTicket) return;

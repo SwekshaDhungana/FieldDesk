@@ -283,7 +283,6 @@ export const TICKETS: Ticket[] = [
     updatedAt: "2025-06-25T14:00:00Z",
   },
 
-  // Esewa tickets
   {
     id: "ticket-8",
     title: "QR payment failing at merchant shops",

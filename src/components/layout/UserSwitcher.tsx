@@ -1,3 +1,4 @@
+import type { ChangeEvent } from "react";
 import { useAuthStore } from "@/stores/auth-store";
 import { ROLE_LABELS } from "@/types";
 import { useUserStore } from "@/stores/user-store";
@@ -18,7 +19,7 @@ export function UserSwitcher() {
 
   if (!currentUser) return null;
 
-  function handleUserChange(e: React.ChangeEvent<HTMLSelectElement>) {
+  function handleUserChange(e: ChangeEvent<HTMLSelectElement>) {
     const user = allUsers.find((u) => u.id === e.target.value);
     if (user) setCurrentUser(user);
   }

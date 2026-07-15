@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { SyntheticEvent } from "react";
 import { useAuthStore } from "@/stores/auth-store";
 import { ROLE_LABELS, PLATFORM_ROLES } from "@/types";
 import type { Role, User, UserFormData } from "@/types";
@@ -80,7 +81,7 @@ export function StaffPage() {
     setFormOpen(true);
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
     e.preventDefault();
 
     if (!currentUser) {

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { SyntheticEvent } from "react";
 import { useAuthStore } from "@/stores/auth-store";
 import { useTicketStore } from "@/stores/ticket-store";
 import { useOrganizationStore } from "@/stores/organization-store";
@@ -52,7 +53,7 @@ export function OrganizationsPage() {
     setFormOpen(true);
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
     e.preventDefault();
 
     if (!currentUser) {

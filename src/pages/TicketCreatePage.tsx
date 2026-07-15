@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import type { SyntheticEvent } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { ArrowLeft, Plus, X } from "lucide-react";
 import { useTicketStore } from "@/stores/ticket-store";
@@ -41,7 +42,7 @@ export function TicketCreatePage() {
 
   if (!currentUser || !orgId) return null;
 
-  function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
     e.preventDefault();
     if (!formData.title.trim()) return;
     const createdTicket = createTicket(

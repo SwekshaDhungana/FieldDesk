@@ -1,4 +1,5 @@
 import { Navigate } from 'react-router-dom';
+import type { ReactNode } from 'react';
 import type { Permission } from '@/types';
 import { usePermissions } from '@/hooks/usePermissions';
 import { useAuthStore } from '@/stores/auth-store';
@@ -7,7 +8,7 @@ interface ProtectedRouteProps {
   permission?: Permission;
   permissions?: Permission[];
   requireAll?: boolean;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export function ProtectedRoute({ permission, permissions, requireAll = false, children }: ProtectedRouteProps) {

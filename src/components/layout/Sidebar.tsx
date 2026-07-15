@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import type { ElementType } from "react";
 import type { Permission } from "@/types";
 import { usePermissions } from "@/hooks/usePermissions";
 import { UserSwitcher } from "./UserSwitcher";
@@ -15,7 +16,7 @@ interface NavItem {
   label: string;
   path: string;
   permission?: Permission;
-  icon: React.ElementType;
+  icon: ElementType;
 }
 
 const NAV_ITEMS: NavItem[] = [

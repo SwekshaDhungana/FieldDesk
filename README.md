@@ -168,6 +168,7 @@ This is the part I spent the most time checking, because cross-organization acce
 - Changes are stored in memory only, so tickets, staff, organizations, and permission edits reset after refresh.
 - Staff management supports add, edit, activate, and deactivate, but not invitations or password setup.
 - Organization management supports add and edit, but not archive/delete.
+- Organization and staff forms only use basic required fields and do not include deeper validation.
 - Analytics are simple and use the current ticket data only.
 - The layout is mainly optimized for desktop review.
 
